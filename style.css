@@ -5,6 +5,7 @@
     padding: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 /* navbar-top put everything inside it as flex */
 .navbar-top * {
     display: flex;
@@ -26,25 +27,27 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 /* icon containter as flex itself */
 .container-icon {
     display: flex;
 }
+
 /* anything inside container will be center self */
 .container-icon * > {
     align-self: center;
 }
+
 /* control icon itself */
 .icon {
     border-radius: 50%;
 }
+
 /* control headlines as flex alone */
 .container-headline {
     display: flex;
     gap: 20px;
 }
-
-
 
 /* control everything inside the headline container to self center */
 .container-headline > * {
@@ -62,9 +65,7 @@
     border-radius: 0.8em;
 }
 
-
 /* advertisement */
-
 * {box-sizing: border-box; border-radius: 2%;}
     .mySlides {display: none}
     img {vertical-align: middle;}
@@ -103,7 +104,6 @@
     background-color: rgba(0,0,0,0.0.8);
 }
 
-
 /* The dots/bullets/indicators */
 .dot {
     cursor: pointer;
@@ -131,28 +131,95 @@
     to {opacity: 1}
 }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-    .prev, .next,.text {font-size: 11px}
-}
-
-
-
 /* Company name */
 .container-main-name {
+    display: flex;
+    text-align: center;
     background-color: #ebebeb;
     padding: 2em;
-    display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .container-main-name h1 {
+    text-align: center;
     font-style:oblique ;
-    font-size: 40px;
+    font-size: 3em;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
 }
 
+/* Cards style */
+
+.container-cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1em;
+    padding: 1em;
+
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+
+.price {
+    color: grey;
+    font-size: 22px;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.card button:hover {
+    opacity: 0.7;
+}
+
+/* top-footer */
+.container-footer-top {
+    display: flex;
+    background-color: #2e2e2e;
+    color: aliceblue;
+    place-content: center;
+    padding: 2em;
+
+}
 
 
+
+
+/* On smaller screens or mobile phones */
+@media only screen and (max-width: 572px) {
+    .prev, .next,.text {font-size: 11px}
+    /* Company name */
+    .container-main-name h1 {
+        text-align: center;
+        font-style:oblique ;
+        font-size: 2em;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    }
+    /* Cards */
+    .container-cards {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 2em;
+        padding: 2em;
+    }
+}
 
 
 
