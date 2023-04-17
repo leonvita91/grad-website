@@ -18,6 +18,7 @@
 /* nav-bottom take care of padding and colors */
 .navbar-bottom {
     border: 1em solid white;
+    margin: 0px 10em 0px 10em;
 }
 
 /* flex container  */
@@ -25,7 +26,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 /* icon containter as flex itself */
@@ -72,7 +73,7 @@
 
 /* Slideshow container */
 .slideshow-container {
-    max-width: 70vw;
+    max-width: 90vw;
     position: relative;
     margin: auto;
 }
@@ -110,7 +111,7 @@
     height: 15px;
     width: 15px;
     margin: 0px 5px 20px ;
-    background-color: #bbb;
+    background-color: rgb(115, 187, 255);
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
@@ -143,7 +144,7 @@
 .container-main-name h1 {
     text-align: center;
     font-style:oblique ;
-    font-size: 3em;
+    font-size: 2em;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
 }
 
@@ -156,7 +157,12 @@
     justify-content: space-around;
     gap: 1em;
     padding: 1em;
+}
 
+.container-cards p {
+    user-select: none;
+    overflow: scroll;
+    max-height: 10em;
 }
 
 .card {
@@ -177,7 +183,7 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color: rgb(115, 187, 255);
     text-align: center;
     cursor: pointer;
     width: 100%;
@@ -191,24 +197,59 @@
 /* top-footer */
 .container-footer-top {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    place-content: center;
+    padding: 0.5em;
     background-color: #2e2e2e;
     color: aliceblue;
-    place-content: center;
-    padding: 2em;
-
 }
 
+.container-footer-top img {
+    transition: 0.5s;
+}
+.container-footer-top img:hover {
+    transform: translateY(-10px);
+}
+
+/* bottom footer */
+.container-bottom-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgb(115, 187, 255);
+    padding: 1em;
+    justify-content: space-around;
+    user-select: none;
+}
+
+
+.container-location {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    font-size: 1em;
+}
+.container-verified {
+    gap: 5px;
+    display: flex;
+}
 
 
 
 /* On smaller screens or mobile phones */
 @media only screen and (max-width: 572px) {
+    .navbar-bottom {
+        border: 1em solid white;
+        margin: 0em 2em 0em 2em;
+    }
     .prev, .next,.text {font-size: 11px}
     /* Company name */
     .container-main-name h1 {
         text-align: center;
         font-style:oblique ;
-        font-size: 2em;
+        font-size: 1.5em;
         font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
     }
     /* Cards */
@@ -220,13 +261,3 @@
         padding: 2em;
     }
 }
-
-
-
-
-
-
-
-
-
-
